@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { GiHamburgerMenu } from "react-icons/gi";
-import "./Header.css";
 import { NavLink } from 'react-router';
+import "./Header.css";
+
 const Header = () => {
   const[showmenu,setshowmenu]=useState(false);
 
@@ -23,26 +24,26 @@ const Header = () => {
             <li >
               <NavLink to="/" className={({isActive}) => 
               `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl
-                ${isActive?'text-green-500':'text-slate-50'}
+                ${isActive?'text-cyan-400 font-bold tracking-wider ':'text-slate-50'}
                 `}>Home 
               </NavLink></li>
 
             <li >
               <NavLink to="/about" className={({isActive}) => 
               `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl
-                ${isActive?'text-green-500':'text-slate-50'}
+                ${isActive?'text-cyan-400 font-bold tracking-wider':'text-slate-50'}
                 `}>About 
               </NavLink>
               </li>
 
             <li ><NavLink to="/country" className={({isActive}) => 
               `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl
-                ${isActive?'text-green-500':'text-slate-50'}
+                ${isActive?'text-cyan-400 font-bold tracking-wider':'text-slate-50'}
                 `}>Country </NavLink></li>
 
             <li ><NavLink to="/contact" className={({isActive}) => 
               `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl
-                ${isActive?'text-green-500':'text-slate-50'}
+                ${isActive?'text-cyan-400 font-bold tracking-wider':'text-slate-50'}
                 `}>Contact </NavLink></li>
           </ul>
         </nav>

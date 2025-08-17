@@ -13,7 +13,7 @@ const CountryCard = ({currdata}) => {
         // x:[500,0],
       }}
       transition={{
-        duration:0.8,delay:0.2
+        duration:0.6,delay:0.2
       }}
    >
     

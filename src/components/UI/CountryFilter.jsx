@@ -47,7 +47,7 @@ const CountryFilter = ({searchdata,setsearchdata,filterdata,setfilterdata,sortin
   return (
     <div className="filter grid grid-cols-1 gap-20  sm:gap-10 md:gap-44 lg:gap-44 md:grid-cols-3  lg:grid-cols-3 p-16 sm:grid-cols-3">
        <input type="text" placeholder='Search Country'
-        name='countryname' className='text-3xl rounded-3xl px-8 py-3  max-w-fit sm:w-72 md:w-72 lg:w-72 bg-gray-600 text-slate-50'
+        name='countryname' className='text-3xl rounded-3xl px-5 py-3  max-w-fit sm:w-72 md:w-72 lg:w-72 bg-gray-600 text-slate-50'
          value={searchdata} onChange={HandleSearchChange}
        />
 
