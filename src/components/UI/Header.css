@@ -1,0 +1,53 @@
+.logo{
+    /* background: #833AB4;
+background: -webkit-linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+
+background: #3F5EFB;
+background: -webkit-linear-gradient(nulldeg, rgba(63, 94, 251, 1) 0%, rgba(80, 171, 125, 1) 57%, rgba(252, 70, 107, 1) 100%); */
+
+background: #3F5EFB;
+background:  -webkit-linear-gradient(nulldeg, rgba(63, 94, 251, 1) 0%, rgba(76, 65, 236, 1) 7%, rgba(80, 171, 125, 1) 57%, rgba(252, 70, 107, 1) 100%);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
+
+
+.menu{
+    display: none;
+}
+
+@media screen and (max-width:998px) {
+    .menu{
+        display: inline-block;
+        text-align: end;
+    }
+    .web-menu{
+        display: none;
+    }
+    .mobile-menu{
+        position: absolute;
+        top:75px;
+        left: 0;
+        right: 50px;
+        width: 100%;
+        background-color: rgb(34, 47, 47);
+        background-color: #0d1212;
+        box-shadow: rgba(255,252,252,0.25) 0px 14px 28px;
+        z-index: 2;
+
+    }
+    .mobile-menu ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        order: 4;
+        align-items: center;
+        
+    }
+    .mobile-menu ul li:last-child{
+        margin-bottom: 15px;
+    }
+}

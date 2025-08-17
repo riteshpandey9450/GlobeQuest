@@ -1,0 +1,32 @@
+.card{
+background: linear-gradient(71deg, #080509, #1a171c, #080509);
+position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(71deg, #080509, #1a171ce6, #080509);
+  background-clip: padding-box;
+  border-radius: 45px;
+ 
+}
+
+
+.card1{
+background: linear-gradient(71deg, #080509, #1a171c, #080509);
+position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(71deg, #080509e5, #1a171caa, #080509ed);
+  background-clip: padding-box;
+  border-radius: 45px;
+ 
+}
+.card2{
+background: linear-gradient(71deg, #080509, #1a171c, #080509);
+position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(71deg, #080509e5, #1a171caa, #080509ed);
+  background-clip: padding-box;
+  /* border-radius: 45px; */
+ 
+}
+
+
+
