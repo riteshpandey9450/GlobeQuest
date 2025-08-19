@@ -1,19 +1,19 @@
 .logo{
-    /* background: #833AB4;
-background: -webkit-linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-
-background: #3F5EFB;
-background: -webkit-linear-gradient(nulldeg, rgba(63, 94, 251, 1) 0%, rgba(80, 171, 125, 1) 57%, rgba(252, 70, 107, 1) 100%); */
-
 background: #3F5EFB;
 background:  -webkit-linear-gradient(nulldeg, rgba(63, 94, 251, 1) 0%, rgba(76, 65, 236, 1) 7%, rgba(80, 171, 125, 1) 57%, rgba(252, 70, 107, 1) 100%);
  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+   text-transform: capitalize;
+   background: -webkit-linear-gradient(90deg, #0077ff, #ff00cc);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
 }
 
-
+.log:hover{
+    background: aqua;
+}
 .menu{
     display: none;
 }
@@ -50,4 +50,23 @@ background:  -webkit-linear-gradient(nulldeg, rgba(63, 94, 251, 1) 0%, rgba(76, 
     .mobile-menu ul li:last-child{
         margin-bottom: 15px;
     }
+}
+
+.nav::after{
+   position: absolute;
+   width: 0%;
+   content: "";
+   height: 2px;
+   left: 0;
+   bottom: -2px;
+   background: rgb(10, 216, 248);
+   /* background: linear-gradient(90deg, #0077ff, #ff00cc); */
+   transition: all 0.5s ease-in-out;
+   -webkit-transition: all 0.5s ease-in-out;
+   -moz-transition: all 0.5s ease-in-out;
+   -ms-transition: all 0.5s ease-in-out;
+   -o-transition: all 0.5s ease-in-out;
+}
+.nav:hover::after{
+    width: 100%;
 }

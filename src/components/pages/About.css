@@ -29,4 +29,14 @@ position: relative;
 }
 
 
+.about-heading{
+  color: rgb(127, 234, 255);
+  letter-spacing: 0.4px;
+  text-shadow: 0 0 1px #7B68EE;
+  /* color: #ff00cc; */
+  text-shadow: 0 0 4px #7B68EE;
+  font-style: italic;
+  /* font-style: oblique; */
+  /* color: red; */
+}
 

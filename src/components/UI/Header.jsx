@@ -23,26 +23,26 @@ const Header = () => {
           <ul  className='flex flex-row  mt-5 gap-14'>
             <li >
               <NavLink to="/" className={({isActive}) => 
-              `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl
+              `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl nav relative
                 ${isActive?'text-cyan-400 font-bold tracking-wider ':'text-slate-50'}
                 `}>Home 
               </NavLink></li>
 
             <li >
               <NavLink to="/about" className={({isActive}) => 
-              `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl
+              `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl nav relative
                 ${isActive?'text-cyan-400 font-bold tracking-wider':'text-slate-50'}
                 `}>About 
               </NavLink>
               </li>
 
             <li ><NavLink to="/country" className={({isActive}) => 
-              `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl
+              `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl nav relative
                 ${isActive?'text-cyan-400 font-bold tracking-wider':'text-slate-50'}
                 `}>Country </NavLink></li>
 
             <li ><NavLink to="/contact" className={({isActive}) => 
-              `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl
+              `text-slate-50 hover:text-green-500 cursor-pointer hover:text-3xl nav relative
                 ${isActive?'text-cyan-400 font-bold tracking-wider':'text-slate-50'}
                 `}>Contact </NavLink></li>
           </ul>

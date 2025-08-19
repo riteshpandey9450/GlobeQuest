@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react';
+import "../../App.css"
 const CountryFilter = ({searchdata,setsearchdata,filterdata,setfilterdata,sorting,setsorting,filterapidata,setapidata}) => {
 
     const HandleSearchChange=(event)=>{
@@ -47,7 +48,7 @@ const CountryFilter = ({searchdata,setsearchdata,filterdata,setfilterdata,sortin
   return (
     <div className="filter grid grid-cols-1 gap-20  sm:gap-10 md:gap-44 lg:gap-44 md:grid-cols-3  lg:grid-cols-3 p-16 sm:grid-cols-3">
        <input type="text" placeholder='Search Country'
-        name='countryname' className='text-3xl rounded-3xl px-5 py-3  max-w-fit sm:w-72 md:w-72 lg:w-72 bg-gray-600 text-slate-50'
+        name='countryname' className='count-filter text-3xl rounded-3xl px-5 py-3  max-w-fit sm:w-72 md:w-72 lg:w-72 bg-gray-600 text-slate-50'
          value={searchdata} onChange={HandleSearchChange}
        />
 
@@ -64,7 +65,7 @@ const CountryFilter = ({searchdata,setsearchdata,filterdata,setfilterdata,sortin
 
        <div className="sort flex justify-around">
         <select name="sort" id="sort" value={sorting} onChange={HandleSortingChange}
-        className='text-3xl rounded-[50px] px-8  py-3 w-fit sm:w-44 md:w-44 lg:w-44 bg-gray-600 text-slate-100 left-0'
+        className='count-filter text-3xl rounded-[50px] px-8  py-3 w-fit sm:w-44 md:w-44 lg:w-44 bg-gray-600 text-slate-100 left-0'
         >
            <option value="Asc">Asc</option>
            <option value="Desc">Desc</option>
@@ -74,7 +75,7 @@ const CountryFilter = ({searchdata,setsearchdata,filterdata,setfilterdata,sortin
 
        <div className="filter flex justify-around">
         <select name="filter" id="filter" value={filterdata} onChange={(e)=>HandleFilterChange(e)}
-        className='text-3xl rounded-[50px] px-8 py-3 w-fit bg-gray-600 text-slate-100'
+        className='count-filter text-3xl rounded-[50px] px-8 py-3 w-fit bg-gray-600 text-slate-100'
         >
                <option value="all">All</option>
             <option value="Africa">Africa</option>

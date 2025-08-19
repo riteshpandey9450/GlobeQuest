@@ -21,7 +21,7 @@ const HeroSection = () => {
             <h1 className='text-[#F6F7F9]'>Explore Every Country, Culture and Journey Across the Globe</h1>
             <p className='text-[#F6F7F9]'>Discover nations, connect with cultures, and experience the world in an easy and interactive way.</p>
 
-            <div className="btn flex bg-[#58C4DC] w-fit gap-3 px-5 py-3 justify-center items-center
+            <div className="btn flex bg-[#58C4DC] w-fit gap-3 px-5 py-4 justify-center items-center 
             rounded-2xl hover:bg-[#202020]  hover:scale-110 hover:border-2">
            <NavLink className="text-[#7c7f7f] btn-text" to="/">Explore Now</NavLink>
             </div>

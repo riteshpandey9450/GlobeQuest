@@ -6,13 +6,17 @@ const AboutCard=({currdata}) => {
     const{countryName,capital,population,interestingFact}=currdata;
     // h-[250px] w-[330px]
   return (
-    <motion.div className="container card p-10 rounded-[35px] space-y-3" 
+    <motion.div className="container card p-10 rounded-[35px] space-y-3 " 
       whileInView={{
         opacity:[0,0.5,1],
         scale:[0,1],
       }}
+     
       transition={{
         duration:0.8,delay:0.2
+      }}
+       whileHover={{
+        scale:1.1
       }}
     >
         <h2 className='text-[#dedfdf] text-[25px]'>{countryName}</h2>

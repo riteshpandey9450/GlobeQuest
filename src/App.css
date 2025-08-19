@@ -78,17 +78,64 @@
   }
 }
 
-
+.country-li:hover img{
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+}
 .country-li:hover{
+  background: linear-gradient(90deg, #0fb3e1b4 0%, #92fe9d9b 100%);
+  opacity: 0.5;
+  /* background-blend-mode: multiply; */
+  box-shadow: rgba(82, 151, 152, 0.529) 0px 54px 55px, rgba(97, 139, 177, 0.545) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  animation: li-anima 0.5s 0.2s 2 forwards ease-in-out;
+  -webkit-animation: li-anima 0.5s 0.2s 2 forwards ease-in-out;
+}
+ @keyframes li-anima {
+  0%{
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+  
+  25%{
+   transform: rotate(-10deg);
+   -webkit-transform: rotate(-10deg);
+   -moz-transform: rotate(-10deg);
+   -ms-transform: rotate(-10deg);
+   -o-transform: rotate(-10deg);
+}
+  50%{
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+  75%{
+   transform: rotate(10deg);
+   -webkit-transform: rotate(10deg);
+   -moz-transform: rotate(10deg);
+   -ms-transform: rotate(10deg);
+   -o-transform: rotate(10deg);
+}
+  100%{
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+  
+ }
 
-  img{
-    scale: 1.05;
-  };
-  scale: 1.05;
-background: #833AB4;
-background: linear-gradient(90deg, rgba(131, 58, 180, 0.81) 0%, rgba(147, 54, 160, 1) 7%, rgba(189, 44, 108, 1) 24%, rgba(224, 36, 65, 0.83) 61%, rgba(253, 29, 29, 0.7) 93%, rgba(252, 176, 69, 0.74) 100%);
-opacity: 0.5;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ .count-filter:hover{
+  box-shadow: rgba(82, 151, 152, 0.448) 0px 54px 55px, rgba(97, 139, 177, 0.545) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  
 }
 
 /* 

@@ -6,9 +6,10 @@ import { motion } from 'motion/react'
 
   const About = () => {
     // console.log(countrydata);
+    //text-[#F6F7F9] 
     return (
     <div className="container space-y-14 pt-8">
-      <motion.h1 className='text-center text-[#F6F7F9]'
+      <motion.h1 className='text-center about-heading  '
        whileInView={{
         opacity:[0,0.5,1],
         scale:[0,1],
