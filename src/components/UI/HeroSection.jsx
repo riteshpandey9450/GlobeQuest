@@ -23,7 +23,7 @@ const HeroSection = () => {
 
             <div className="btn flex bg-[#58C4DC] w-fit gap-3 px-5 py-3 justify-center items-center
             rounded-2xl hover:bg-[#202020]  hover:scale-110 hover:border-2">
-           <NavLink className="text-[#7c7f7f] btn-text" to="/">Explore Now</NavLink>
+           <NavLink className="text-[#7c7f7f] btn-text" to="/country">Explore Now</NavLink>
             </div>
         </motion.div>
 
