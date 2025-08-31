@@ -4,13 +4,39 @@ import { Form } from 'react-router'
 
 
 const Contact = () => {
+const [result, setResult] = React.useState("");
 
-  const HandlFormSubmit=(e)=>{
-    e.preventDefault(); //stop page refresh
-    const formdata=new FormData(e.target);
- const data= Object.fromEntries(formdata.entries());
-  // console.log(data);
-};
+//   const HandlFormSubmit=(e)=>{
+//     e.preventDefault(); //stop page refresh
+//     const formdata=new FormData(e.target);
+//  const data= Object.fromEntries(formdata.entries());
+//   // console.log(data);
+// };
+
+
+
+  const HandleSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", `${import.meta.env.CONTACT_API_KEY}`);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
   return (
     <motion.div className="container flex flex-col items-center  pt-44 space-y-10 pb-20"
     animate={{
@@ -25,7 +51,7 @@ const Contact = () => {
      
     >
       <h1 className='text-[#dedfdf] -tracking-tight items-center '>Contact Us</h1>
-      <form className='flex flex-col space-y-10 item-center self-center' onSubmit={HandlFormSubmit}>
+      <form className='flex flex-col space-y-10 item-center self-center' onSubmit={HandleSubmit}>
       <input type="text" placeholder='Enter Your Name' required autoComplete='off'name='usename' className='px-6 py-3 text-3xl  text-slate-50 rounded-xl w-full h-auto max-w-[400px] sm:w-[400px] md:w-[400px] lg:w-[400px]  sm:h-[50px] md:h-[50px] lg:h-[50px] border-solid border-2 border-[#6a6767] bg-transparent 
       ' />
       <input type="email" placeholder='Enter Your Email' required autoComplete='off' name='email' className='px-6 py-3 text-3xl text-slate-50  rounded-xl w-full h-auto max-w-[400px] sm:w-[400px] md:w-[400px] lg:w-[400px] sm:h-[50px] md:h-[50px] lg:h-[50px] border-solid border-2 border-[#6a6767] bg-transparent'/>

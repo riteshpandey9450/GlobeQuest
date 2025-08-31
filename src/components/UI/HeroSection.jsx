@@ -6,24 +6,43 @@ const HeroSection = () => {
     <div className="container  grid grid-cols-1 gap-5 p-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-32 pt-16">
 
         {/* Left Section Start */}
-        <motion.div className="left flex flex-col gap-10 pt-32 order-2 lg:order-1 sm:order-2 md:order-1"
-        
+        {/* pt-32 */}
+        <motion.div className="left flex flex-col gap-10 pt-52 order-2 lg:order-1 sm:order-2 md:order-1"
+      
         whileInView={{
-              opacity:[0,1],
+              opacity:[0,0.5,1],
               // top:[0,100],
-              x:[0,20]
+              // scaleX:[0,50,100],
+              x:[0,10,15],
+              scale:[0.5,1],
             }}
             transition={{
-              duration:2,delay:0.5
+              duration:1,delay:0.8
             }}
         >
 
-            <h1 className='text-[#F6F7F9]'>Explore Every Country, Culture and Journey Across the Globe</h1>
-            <p className='text-[#F6F7F9]'>Discover nations, connect with cultures, and experience the world in an easy and interactive way.</p>
+            <motion.h1 className='text-[#F6F7F9] px-4'
+           
+        
+            >Explore Every Country, Culture and Journey Across the Globe</motion.h1>
+            <motion.p className='text-[#F6F7F9] px-4'
+             whileInView={{
+                // x:[-20,0],
+                left:[-10,0],
+                scale:[0,1],
+              }}
+              transition={{
+              duration:1.5,delay:0.8
+            }}
+            >Discover nations, connect with cultures, and experience the world in an easy and interactive way.</motion.p>
 
             <div className="btn flex bg-[#58C4DC] w-fit gap-3 px-5 py-4 justify-center items-center 
-            rounded-2xl hover:bg-[#202020]  hover:scale-110 hover:border-2">
-           <NavLink className="text-[#7c7f7f] btn-text" to="/country">Explore Now</NavLink>
+            rounded-2xl hover:bg-[#686666]  hover:scale-110 hover:border-2 mx-4 text-2xl"
+            
+            >
+           <motion.NavLink className="text-[#7c7f7f] btn-text" to="/country"
+            
+           >Explore Now</motion.NavLink>
             </div>
         </motion.div>
 
@@ -36,8 +55,8 @@ const HeroSection = () => {
 
             whileInView={{
               opacity:[0,1],
-             x:[50,20],
-            // scale:[0,1],
+             x:[50,8],
+            // scale:[0,0.2],
             }}
              transition={{
               duration:1,delay:0.5

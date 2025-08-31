@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { motion} from 'motion/react';
 import "../../App.css"
 import { NavLink,Navigate } from 'react-router';
+import { Loading } from '../pages/Loading';
 
 
 const CountryDetails = () => {
@@ -30,7 +31,7 @@ const CountryDetails = () => {
     },[]);
     // console.log(apidata);
 
-    if(isPending || (!apidata)) return <Loader/>
+    if(isPending || (!apidata)) return <Loading/>
   return (
     <div className="w-full card2 mt-10 mb-10 p-0 sm:p-10 md:p-44 lg:-44">
         {/* Data section */}
@@ -45,6 +46,9 @@ const CountryDetails = () => {
         opacity:[0,0.5,1],
         scale:[0,1],
        }}
+       whileHover={{
+        scale:1.05
+       }}
        transition={{
         duration:0.8,delay:0.2,
        }}
@@ -54,7 +58,7 @@ const CountryDetails = () => {
         <motion.div className="right flex flex-col space-y-8 pl-14"
    
         >
-        <motion.h2 className='text-[#dedfdf] text-[25px]'
+        <motion.h1 className='text-[#dedfdf] text-[20px] font-bold tracking-[2px]'
                 whileInView={{
         y:[100,50,0],
         opacity:[0,0.5,1],
@@ -64,9 +68,9 @@ const CountryDetails = () => {
         duration:0.8,delay:0.2,
        }}
 
-        >{apidata.name.official}</motion.h2>
+        >{apidata.name.official}</motion.h1>
         
-         <motion.p className='text-[#DEDFDF]'
+         <motion.p className='text-[#dedfdf] text-2xl'
            whileInView={{
         y:[100,50,0],
         opacity:[0,0.5,1],
@@ -75,12 +79,16 @@ const CountryDetails = () => {
        transition={{
         duration:0.8,delay:0.2,
        }}
-         ><b className='text-[#939d9d]'>Native Names: </b>
+         ><b className='text-[#939d9d]'>
+           <span className='tracking-[2px] '>
+            Native Names: </span>
+            </b>
+         <span className='tracking-[1.3px] '></span> 
          { Object.keys(apidata.name.nativeName)
          .map((key)=> apidata.name.nativeName[key].common).join(",")}
         </motion.p>
 
-        <motion.p className='text-[#DEDFDF]'
+        <motion.p className='text-[#DEDFDF] text-2xl'
         
          whileInView={{
         y:[100,30,10],
@@ -90,8 +98,10 @@ const CountryDetails = () => {
        transition={{
         duration:0.8,delay:0.2,
        }}
-        ><b className='text-[#939d9d]'>Population: </b>{apidata.population.toLocaleString()}</motion.p>
-        <motion.p className='text-[#DEDFDF]'
+        ><b className='text-[#939d9d]'><span className='tracking-[2px] '>Population: </span></b>
+        <span className='tracking-[1.3px] '>{apidata.population.toLocaleString()}</span></motion.p>
+
+        <motion.p className='text-[#DEDFDF] text-2xl'
           whileInView={{
         y:[100,50,0],
         opacity:[0,0.5,1],
@@ -100,7 +110,8 @@ const CountryDetails = () => {
        transition={{
         duration:0.8,delay:0.2,
        }}
-        ><b className='text-[#939d9d]'>Region: </b>{apidata.region}</motion.p>
+        ><b className='text-[#939d9d]'>
+          <span className='tracking-[2px] '>Region: </span></b>{apidata.region}</motion.p>
         <motion.p className='text-[#DEDFDF]' 
              whileInView={{
         y:[100,50,0],
@@ -111,8 +122,9 @@ const CountryDetails = () => {
         duration:0.8,delay:0.2,
        }}
 
-        ><b className='text-[#939d9d]'>Sub Region: </b>{apidata.subregion}</motion.p>
-         <motion.p className='text-[#DEDFDF]'
+        ><b className='text-[#939d9d]'>
+          <span className='tracking-[2px] '>Sub Region:</span> </b>{apidata.subregion}</motion.p>
+         <motion.p className='text-[#DEDFDF] text-2xl'
            whileInView={{
         y:[100,50,0],
         opacity:[0,0.5,1],
@@ -122,8 +134,9 @@ const CountryDetails = () => {
         duration:0.8,delay:0.2,
        }}
          
-         ><b className='text-[#939d9d]'>Capital: </b>{apidata.capital}</motion.p> 
-          <motion.p className='text-[#DEDFDF]'
+         ><b className='text-[#939d9d]'>
+          <span className='tracking-[2px] '>Capital: </span> </b>{apidata.capital}</motion.p> 
+          <motion.p className='text-[#DEDFDF] text-2xl'
              whileInView={{
         y:[100,50,0],
         opacity:[0,0.5,1],
@@ -133,8 +146,9 @@ const CountryDetails = () => {
         duration:0.8,delay:0.2,
        }}
           
-        ><b className='text-[#939d9d]'>Top Level Domain: </b>{apidata.tld[0]}</motion.p>
-         <motion.p className='text-[#DEDFDF]'
+        ><b className='text-[#939d9d]'>
+          <span className='tracking-[2px] '>Top Level </span> Domain: </b>{apidata.tld[0]}</motion.p>
+         <motion.p className='text-[#DEDFDF] text-2xl'
            whileInView={{
         y:[100,50,0],
         opacity:[0,0.5,1],
@@ -144,12 +158,13 @@ const CountryDetails = () => {
         duration:0.8,delay:0.2,
        }}
         
-         ><b className='text-[#939d9d]' >Currencies: </b>
+         ><b className='text-[#939d9d]' >
+          <span className='tracking-[2px] '>Currencies: </span> </b>
          {Object.keys(apidata.currencies)
           .map((curr)=> apidata.currencies[curr].name+`${apidata.currencies[curr].symbol}`).join(",")
          }</motion.p>
 
-         <motion.p className='text-[#DEDFDF]' 
+         <motion.p className='text-[#DEDFDF] text-2xl' 
           whileInView={{
         y:[100,50,0],
         opacity:[0,0.5,1],
@@ -159,7 +174,8 @@ const CountryDetails = () => {
         duration:0.8,delay:0.2,
        }}
          
-         ><b className='text-[#939d9d]'>Languages: </b>
+         ><b className='text-[#939d9d]'>
+          <span className='tracking-[2px] '>Languages: </span> </b>
         {Object.keys(apidata.languages)
          .map((curr)=> apidata.languages[curr]).join(",")
         }

@@ -30,15 +30,21 @@ html{
 }
 h1,h2,h3.h4,h5,h6{
   /* color: rgba(0, 0, 0, 0.523); */
-  font-weight: 900;
+  /* font-weight: 900; */
   font-family: "Poppins", sans-serif;
 }
 h1{
-  font-size: 3.2rem;
+  /* font-size: 3.2rem; */
+  /* max-width: 500px; */
+  font-size: 2.8rem;
+  letter-spacing: 0.2rem;
+  line-height: 4rem;
+
 }
 p,li,a{
   color: var(--para-color);
   font-size: 1.8rem;
+  /* font-size: 1.5rem; */
   letter-spacing:0.1rem;
   line-height: 1.5;
 }

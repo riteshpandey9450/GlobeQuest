@@ -4,6 +4,7 @@ import Loader from '../UI/Loader';
 import "../../App.css"
 import CountryCard from '../UI/CountryCard';
 import CountryFilter from '../UI/CountryFilter';
+import { Loading } from './Loading';
 
 const Country = () => {
     const[apidata,setapidata]=useState([]);//country apidata
@@ -21,7 +22,7 @@ const Country = () => {
   },[]);
 
   if(isPending || (!apidata)) {
-    return <Loader/>
+    return <Loading/>
   }
 
 

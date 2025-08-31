@@ -5,7 +5,7 @@ import "../../App.css"
 const CountryCard = ({currdata}) => {
 
   return (
-   <motion.li className="card1 p-9  flex flex-col gap-5 pb-10 hover:scale-110 country-li "
+   <motion.li className="card1 p-9  flex flex-col gap-5 pb-14 hover:scale-110 country-li space-y-3"
     
       whileInView={{
         opacity:[0,0.5,1],
@@ -18,15 +18,29 @@ const CountryCard = ({currdata}) => {
    >
     
     <img src={currdata.flags.png} alt="" className='m-6 h-[150px]  rounded-2xl'/>
-    <h2 className='text-[#dedfdf] text-[25px] ml-6'>{currdata.name.common.length>10?currdata.name.common.slice(0,10)+"....":currdata.name.common}</h2>
-    <p className='text-[#dedfdf] ml-6'><b>Population: </b>{currdata.population}</p>
-    <p className='text-[#dedfdf]  ml-6'><b>Region: </b>{currdata.region}</p>
-    <p className='text-[#dedfdf]  ml-6'><b>Capital: </b>{currdata.capital[0]}</p>
-    {/* <NavLink><button className='ml-6'>Read More</button></NavLink> */}
+    <h1 className='text-[#dedfdf] text-[20px] font-bold ml-6 tracking-[2px]'>{currdata.name.common.length>10?currdata.name.common.slice(0,10)+"....":currdata.name.common}</h1>
+    <p className='text-[#dedfdf] ml-6 text-2xl'>
+      <b>
+      <span className='tracking-[2px] '>Population: </span>
+      </b>
+      <span className='tracking-[1.3px]'> {currdata.population} </span></p>
 
-    <div className="btn flex bg-[#58C4DC] w-fit gap-3 px-5 py-3 justify-center items-center
-                rounded-2xl hover:bg-[#202020]  hover:scale-110 hover:border-2 ml-6 ">
-               <NavLink className="text-[#7c7f7f] btn-text" to={`/country/${currdata.name.common}`}>Explore Now</NavLink>
+    <p className='text-[#dedfdf]  ml-6 text-2xl'><b>
+        <span className='tracking-[2px] '>Region: 
+          </span>
+          </b>
+    <span className='tracking-[1.3px]'> {currdata.region}</span></p>
+
+    <p className='text-[#dedfdf]  ml-6 text-2xl'><b>
+      <span className='tracking-[2px] '>Capital: 
+        </span></b>
+        <span className='tracking-[1.3px]'> {currdata.capital[0]}</span></p>
+    {/* <NavLink><button className='ml-6'>Read More</button></NavLink> */}
+{/* btn flex bg-[#659faebe] w-fit gap-3 px-5 py-3 justify-center items-center
+                rounded-2xl hover:bg-[#202020a2]  hover:scale-110 hover:border-2 ml-6 */}
+    <div className="btn flex  w-fit gap-3 px-5 py-3 justify-center items-center
+                rounded-2xl   hover:scale-110 hover:border-2 ml-6">
+               <NavLink className="text-[#7c7f7f] btn-text text-[16px]" to={`/country/${currdata.name.common}`}>Explore Now</NavLink>
     </div>
    </motion.li>
   )

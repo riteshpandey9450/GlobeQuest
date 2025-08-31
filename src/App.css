@@ -1,6 +1,5 @@
 .loader {
-    /* w-32px */
-  width: 100px;
+  /*w-32px*/width: 100px;
   height: 90px;
   height: 400px;
   display: block;
@@ -15,6 +14,7 @@
   background-repeat: no-repeat;
   box-sizing: border-box;
   animation: animloaderBack 1s linear infinite alternate;
+  -webkit-animation: animloaderBack 1s linear infinite alternate;
 }
 .loader::before {
   content: '';  
@@ -85,13 +85,14 @@
   -ms-transform: scale(1.03);
   -o-transform: scale(1.03);
 }
-.country-li:hover{
-  background: linear-gradient(90deg, #0fb3e1b4 0%, #92fe9d9b 100%);
+.country-li:hover,.about-item:hover{
+  background: linear-gradient(90deg, #2d75898a 0%, #66a16c9b 100%);
   opacity: 0.5;
+  scale: 1.05;
   /* background-blend-mode: multiply; */
-  box-shadow: rgba(82, 151, 152, 0.529) 0px 54px 55px, rgba(97, 139, 177, 0.545) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  animation: li-anima 0.5s 0.2s 2 forwards ease-in-out;
-  -webkit-animation: li-anima 0.5s 0.2s 2 forwards ease-in-out;
+  box-shadow: rgba(75, 114, 115, 0.441) 0px 54px 55px, rgba(88, 121, 152, 0.545) 0px -12px 30px, rgba(0, 0, 0, 0) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0) 0px -3px 5px;
+  /* animation: li-anima 0.5s 0.2s 2 forwards ease-in-out; */
+  /* -webkit-animation: li-anima 0.5s 0.2s 2 forwards ease-in-out; */
 }
  @keyframes li-anima {
   0%{
@@ -134,7 +135,7 @@
  }
 
  .count-filter:hover{
-  box-shadow: rgba(82, 151, 152, 0.448) 0px 54px 55px, rgba(97, 139, 177, 0.545) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(81, 122, 123, 0.308) 0px 54px 55px, rgba(97, 112, 125, 0.545) 0px -12px 30px, rgba(72, 71, 71, 0.12) 0px 4px 6px, rgba(88, 87, 87, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   
 }
 
